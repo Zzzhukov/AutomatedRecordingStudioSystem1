@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1000.0" minHeight="720.0" minWidth="1000.0" prefHeight="720.0" prefWidth="1000.0" stylesheets="@../style/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zh.arss.controller.MainController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/background_2.jpg" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="tabPane" layoutX="11.0" layoutY="14.0" prefHeight="687.0" prefWidth="971.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Сделать заявку">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="735.0">
+                     <children>
+                        <GridPane fx:id="timeTableGPane" layoutX="118.0" layoutY="14.0" style="-fx-border-color: white;" stylesheets="@../style/JMetroDarkTheme.css">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="35.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="31.0" minHeight="1.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <Button fx:id="createRequest" layoutX="711.0" layoutY="579.0" mnemonicParsing="false" text="Подать заявку" visible="false" />
+                        <TextField fx:id="emailTextField" alignment="CENTER" layoutX="118.0" layoutY="579.0" prefHeight="33.0" prefWidth="149.0" promptText="Введите Email" visible="false" />
+                        <TextField fx:id="phoneTextField" alignment="CENTER" layoutX="276.0" layoutY="579.0" prefHeight="33.0" prefWidth="165.0" promptText="Введите телефон" visible="false" />
+                        <TextField fx:id="descriptionTextField" alignment="CENTER" layoutX="449.0" layoutY="579.0" prefHeight="33.0" prefWidth="249.0" promptText="Введите дополнительную информацию" visible="false" />
+                        <Label fx:id="requestTimeLabel" alignment="CENTER" layoutX="118.0" layoutY="556.0" prefHeight="17.0" prefWidth="737.0" text="Время заявки: " visible="false" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Аранжировки">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="14.0" layoutY="14.0" prefHeight="592.0" prefWidth="942.0" style="-fx-background: transparent;">
+                           <content>
+                              <GridPane fx:id="arrangeGP" prefHeight="30.0" prefWidth="930.0">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane fx:id="buyPane" minHeight="0.0" minWidth="0.0" prefHeight="618.0" prefWidth="971.0" style="-fx-background-color: darkslateblue;" visible="false">
+                           <children>
+                              <Button fx:id="closeBuyPaneButton" layoutX="853.0" layoutY="14.0" mnemonicParsing="false" text="Закрыть" />
+                              <RadioButton fx:id="mp3RB" layoutX="141.0" layoutY="541.0" mnemonicParsing="false" text="MP3 Lease - 800 ₽" />
+                              <RadioButton fx:id="wavRB" layoutX="340.0" layoutY="541.0" mnemonicParsing="false" text="WAV - 1500 ₽" />
+                              <RadioButton fx:id="wavURB" layoutX="522.0" layoutY="541.0" mnemonicParsing="false" text="WAV Unlimit - 2000 ₽" />
+                              <RadioButton fx:id="trackOutRB" layoutX="729.0" layoutY="541.0" mnemonicParsing="false" text="TRACK OUT - 3000 ₽" />
+                              <Button fx:id="buyArrangeButton" layoutX="439.0" layoutY="571.0" mnemonicParsing="false" text="Купить" />
+                              <MediaView fx:id="arrangeBuyMedia" fitHeight="450.0" fitWidth="900.0" layoutX="36.0" layoutY="84.0" />
+                              <Label fx:id="arrangeBuyName" alignment="CENTER" layoutY="47.0" prefHeight="17.0" prefWidth="971.0" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Сведение">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="16.0" layoutY="29.0" style="-fx-background-color: MidnightBlue;" text="Сведение - 2000 рублей">
+                           <font>
+                              <Font name="Century" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="59.0" prefHeight="484.0" prefWidth="315.0" text="В услугу входит:&#10;&#10;- Ручное выравнивание даблов / интервалов&#10;- Динамическая обработка&#10;- Эквализация&#10;- Создание уникальных пространственных цепочек&#10;- Монтаж голоса на каждом участке песни&#10;- Финальный мастеринг&#10;&#10;Срок выполнения работы: от 2 дней (зависит от сложности проекта, количества дорожек)&#10;&#10;Правки по проекту не ограничены.&#10;Стоимость услуги может варьироваться в зависимости от сложности материала." wrapText="true">
+                           <font>
+                              <Font name="Century" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="493.0" layoutY="29.0" style="-fx-background-color: MidnightBlue;" text="Саундизайн - 1500 рублей">
+                           <font>
+                              <Font name="Century" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="472.0" layoutY="141.0" style="-fx-background-color: MidnightBlue;" text="Трек под ключ - 10000 рублей">
+                           <font>
+                              <Font name="Century" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="341.0" layoutY="59.0" prefHeight="71.0" prefWidth="608.0" text="Данная услуга включает в себя различные фишки над вокалом и аранжировкой. Это сделает ваш трек интереснее и добавят некой изюминки, получится нечто впечатляющее." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Century" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="15.0" layoutY="563.0" mnemonicParsing="false" onAction="#openContacts" prefHeight="33.0" prefWidth="943.0" text="Записаться" />
+                        <Label layoutX="353.0" layoutY="171.0" prefHeight="375.0" prefWidth="604.0" text="Мы создадим оригинальную минусовку специально под ваш текст, поможем срежиссировать вокал и все необходимые &quot;фишки&quot;, сведем и отмастерим результат силами нескольких специалистов, организуем дистрибьюцию на все актуальные платформы и информационное сопровождение вашего релиза!&#10;&#10;Всё это - в постоянном плотном сотрудничестве с вашим персональным Продюсером и всей командой специалистов!&#10;&#10;Время исполнения - пока клиент не будет доволен!&#10;&#10;Ограничения:&#10;Не более 10 часов студийной записи с бронированием полной площадки;&#10;Неограниченное присутствие при работе продюсера, по согласованию с продюсером." wrapText="true">
+                           <font>
+                              <Font name="Century" size="18.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Запись">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="112.0" layoutY="347.0" style="-fx-background-color: MidnightBlue;" text="Час на студии&#10;800 рублей" textAlignment="CENTER">
+                           <font>
+                              <Font name="Century" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="193.0" layoutY="118.0" prefHeight="169.0" prefWidth="589.0" text="Во время пока вы будете в студии вам будут оказаны следующие услуги в любой комбинации:&#10;&#10;- Запись голоса&#10;- Сведение&#10;- Мастеринг" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Century" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="14.0" layoutY="444.0" mnemonicParsing="false" onAction="#openRequests" prefHeight="33.0" prefWidth="943.0" text="Записаться" />
+                        <Label layoutX="686.0" layoutY="347.0" style="-fx-background-color: MidnightBlue;" text="3 часа на студии&#10;2000 рублей" textAlignment="CENTER">
+                           <font>
+                              <Font name="Century" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="353.0" layoutY="347.0" style="-fx-background-color: MidnightBlue;" text="Аренда студии на ночь&#10;6000 рублей" textAlignment="CENTER">
+                           <font>
+                              <Font name="Century" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="331.0" layoutY="499.0" text="Предоплата 50%&#10;При отмене бронирования - возврат денежных средств&#10;возможен при отмене не позднее чем за 24 часа." textAlignment="CENTER" underline="true" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Команда">
+              <content>
+                <AnchorPane maxHeight="670.0" minHeight="0.0" minWidth="0.0" prefHeight="633.0" prefWidth="971.0">
+                     <children>
+                        <Button layoutX="31.0" layoutY="585.0" mnemonicParsing="false" onAction="#openContacts" prefHeight="33.0" prefWidth="899.0" text="Записаться" />
+                        <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="14.0" prefHeight="564.0" prefWidth="947.0" style="-fx-background: transparent;" vbarPolicy="ALWAYS">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1360.0" prefWidth="943.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="7.0" maxWidth="900.0" opacity="0.9" prefHeight="1360.0" prefWidth="900.0" style="-fx-background-color: MidnightBlue;" text="1) Вы приходите на студию к назначенному времени, знакомитесь со звукорежиссером. В короткой беседе рассказываете ему, что собираетесь записывать.&#10;&#10;Если волнуетесь, и у вас мало опыта - так и скажите! Звукорежиссер, на время сессии - ваш верный друг, его задача - помочь вам достичь своей цели&#10;C максимальным комфортом, потому постарайтесь установить максимально открытый контакт - это сыграет вам на руку! Расскажите, как начали заниматься музыкой, все что угодно, что поможет вам расслабиться. Задайте каждый интересующий вас вопрос. Беседа - лучший способ установить контакт, ведущий к продуктивному времени на студии! &#10;&#10;2) Затем, необходимо предложить звукорежиссеру минус,&#10;Звукорежиссер поможет вам расположиться в фонателье, выставит микрофон, и запустит тестовый прогон записи - попросит вас исполнить композицию целиком, от начала - до конца. Такая запись не будет использоваться в дальнейшей работе, и в ее процессе звукорежиссер настроит предусилитель и добьется комфортного соотношения минуса и голоса в ваших наушниках. Обязательно разговаривайте со звукорежиссером, и комментируйте, если хотели бы слышать чего-то - больше, а чего-то - меньше.&#10;&#10;3) Обсудив общую структуру композиции, начинается запись основных дорожек.&#10;В зависимости от композиции и вашего удобства, вы можете записывать части по паре строк - или большими блоками. &#10;Уверенно стойте перед микрофоном, старайтесь не раскачиваться - определенная “артистическая экспрессия” такого рода допустима, но лучше таки не стоит.Ни в коем случае не хватайте микрофон руками, и не приближайтесь к нему, если не обговорили этого со звукорежиссёром.&#10;&#10;4) После записи основных дорожек - скорее всего, вам потребуется записать Даблы, Бэки и Эйры\Эдлибы. &#10;Даблы - полные дубли основной дорожки, как правило - чуть другим голосом, их задача - подмешаться к основному голосу для уплотнения основного вокала. Крайне полезный инструмент для работы с “жирным”, тяжелым материалом - на самых мягких же треках ими часто жертвуют.&#10;Бэки - усиления отдельных фраз, слов, акценты. Важный элемент для усиления динамики в голосе, часто делается в две дорожки, которые слегка разводятся по панораме для ощущения ширины. Чаще всего - точные повторения этих самых фраз и слов, иногда - “ответы” и “реакции” на них.&#10;Эйры\Эдлибы - звуки, зачастую - нечленораздельные, или не имеющие определенного смысла, но приятные и заходящие по своим фонетическим характеристикам. Сюда можно добавить и выкрики вроде “скррр”, и звукоподражание курению, или сирене. Чаще всего - эйры и адлибы сводятся сильно тише основной дорожки, а потому тоже сильно добавляют очков динамике вокала.Важно понимать - многие крутости и фишки итогового звучания закладываются уже&#10;на этом этапе! Лучше сразу записать нужную для “крутого перехода” дорожку, чем потом пытаться наколдовать её “из того что есть” на сведении. Отнеситесь к записи дополнительных дорожек - как к важному этапу разработки структуры композиции.&#10;&#10;5) После записи наступает время сведения. &#10;Сядьте рядом со звукорежиссёром и позвольте ему творить, не стоит стесняться рассказывать о своих желаниях, видениях.&#10;В двух словах о том, что происходит на сведении - рассказать сложно. Но если попробовать - звукорежиссер вычистит все дорожки, и заставит их хорошо звучать вместе, обработает как “интересностями”, так и обыденностями, нужными для подготовки трека к финальному, громкому звучанию.В зависимости от материала сведение может быть простой работой на полчаса, а может быть - крайне замороченным многочасовым делом. Если понимаете, что на сведение у вас не остается времени - можно либо забронировать студию в следующий раз отдельно для сведения, либо отдать трек на Дистанционное Сведение.&#10;&#10;6) По итогам записи звукорежиссёр передаст вам записанные дорожки, либо демо версию трека." wrapText="true">
+                                       <font>
+                                          <Font name="Century" size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Контакты">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="634.0" layoutY="264.0" style="-fx-rotate: 90;" text="Работаем с 2019">
+                           <font>
+                              <Font name="Century" size="72.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="70.0" layoutY="389.0" text="Почта: valentin.zhukow@gmail.com&#10;vk: https://vk.com/yungmilllie4real&#10;tg: @ZZZvalya&#10;Адрес: Московская 15">
+                           <font>
+                              <Font name="Century" size="40.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="500.0">
+                           <image>
+                              <Image url="@../image/tg_logo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="449.0">
+                           <image>
+                              <Image url="@../image/vk_logo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="396.0">
+                           <image>
+                              <Image url="@../image/google_logo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="549.0">
+                           <image>
+                              <Image url="@../image/house_logo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="341.0" fitWidth="341.0" layoutX="24.0" layoutY="31.0">
+                           <image>
+                              <Image url="@../image/icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="403.0" layoutY="121.0" text="Студия звукозаписи &quot;Valentine Scarab&quot;. &#10;Лучшая студия звукозаписи в Пензе. &#10;Сотни довольных клиентов.&#10;Отличное качество звучания каждого трека.&#10;&#10;Работа по предоплате">
+                           <font>
+                              <Font name="Century" size="21.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="registerButton" layoutX="770.0" layoutY="14.0" mnemonicParsing="false" text="Зарегистрироваться" />
+      <Button fx:id="authorizeButton" layoutX="770.0" layoutY="49.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="184.0" text="Авторизоваться" />
+   </children>
+</AnchorPane>
